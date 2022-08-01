@@ -77,6 +77,12 @@ $ rspec ./spec/#{filename}_spec.rb
 - Twitter: [@\_Djoleto](https://twitter.com/_djoleto_)
 - LinkedIn: [Nii Amanor Djoleto](https://linkedin.com/in/nii-amanor-djoleto)
 
+👤 **Abol Ger**
+
+- GitHub: [@ger619](https://github.com/ger619)
+- Twitter: [@ger_abol](https://twitter.com/ger_abol)
+- LinkedIn: [David Ger](https://linkedin.com/in/david-ger-426b4576)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
