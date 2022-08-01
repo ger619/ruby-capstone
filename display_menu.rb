@@ -1,6 +1,7 @@
 require_relative './exit_app'
+require_relative './book'
 
-def display_menu
+def display_menu(app)
   puts "\nWelcome to our Catalog!"
   puts "\nPlease choose an option by entering a number:"
   options = [
@@ -13,7 +14,7 @@ def display_menu
   choice = gets.chomp
   case choice
   when '1'
-    display_books
+    display_books(app)
   when '2'
     display_music_albums
   when '3'
@@ -23,23 +24,20 @@ def display_menu
   end
 end
 
-def display_books
+def display_books(app)
   puts 'Enter selected tasks:'
-  options = [
-    '1 - List all books',
-    '2 - Add a book',
-    '3 - Back to menu'
-  ]
-  puts options
+  puts " 1 - List all books\n 2 - List all labels\n 3 - Add a book\n 4 - Back to menu\n 5 - Exit App"
   choice = gets.chomp
   case choice
   when '1'
-    list_books
+    app.display_books
   when '2'
-    add_book
+    list_labels
   when '3'
-    display_menu
+    app.add_book
   when '4'
+    display_menu
+  when '5'
     exit_app
   else
     puts 'Invalid option'
