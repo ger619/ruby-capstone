@@ -4,6 +4,8 @@
 
 > This is an educational project to create a console app that you to keep a record of different types of things you won: books, music albums, movies, and games. Everything will be based on the UML class diagram presented below.
 
+![catalog_of_my_things](https://user-images.githubusercontent.com/98527559/182126086-fc6a58be-ce66-43cc-9a67-42ddf9633100.png)
+
 ## Built With
 
 - [x] Programming Language: [Ruby](https://www.ruby-lang.org/en/)
