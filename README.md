@@ -20,11 +20,13 @@ To get a local copy up and running follow these simple steps.
 - [x] A code editor like Visual Studio Code with Git and Ruby.
 
 You can check if Git is installed by running the following command in the terminal.
+
 ```
 $ git --version
 ```
 
 Likewise for Ruby installation.
+
 ```
 $ ruby --version && irb
 ```
@@ -54,6 +56,7 @@ $ gem install rspec
 ```
 
 To run tests, please run this command
+
 ```
 $ rspec ./spec/#{filename}_spec.rb
 ```
@@ -67,6 +70,12 @@ $ rspec ./spec/#{filename}_spec.rb
 - GitHub: [![GitHub Badge](https://img.shields.io/badge/-mavericks--db-white?logo=GitHub&logoColor=181717&style=plastic)](https://github.com/mavericks-db)
 
 - Twitter: [![Twitter Badge](https://img.shields.io/badge/-mavericks__db-white?logo=Twitter&logoColor=1DA1F2&style=plastic)](https://twitter.com/mavericks_db)
+
+👤 **Nii Amanor Djoleto**
+
+- GitHub: [@ramrod433](https://github.com/ramrod433)
+- Twitter: [@\_Djoleto](https://twitter.com/_djoleto_)
+- LinkedIn: [Nii Amanor Djoleto](https://linkedin.com/in/nii-amanor-djoleto)
 
 ## 🤝 Contributing
 
