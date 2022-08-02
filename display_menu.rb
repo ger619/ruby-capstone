@@ -70,7 +70,8 @@ def display_games(app)
   options = [
     '1 - List all games',
     '2 - Add a game',
-    '3 - Back to menu'
+    '3 - List all authors'
+    '4 - Back to menu'
   ]
   puts options
   choice = gets.chomp
@@ -80,8 +81,10 @@ def display_games(app)
   when '2'
     app.add_game
   when '3'
-    display_menu(app)
+    app.author_display
   when '4'
+    display_menu(app)
+  when '5'
     exit_app(app)
   else
     puts 'Invalid option'

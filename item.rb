@@ -27,6 +27,13 @@ class Item
     )
   end
 
+  def add_author(author)
+    author.is_a?(Author) && @author.nil? && (
+      @author = author
+      author.add_item(self)
+    )
+  end
+
   def move_to_archive
     @archived = true if can_be_archived?
   end

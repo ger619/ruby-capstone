@@ -2,7 +2,9 @@ require_relative './app'
 require_relative './game'
 
 def list_games
-  p @game_list
+  @game_list.each_with_index do |game, index|
+    puts "(#{index}) Multiplayer: \"#{game.multiplayer}\", Last Played: #{game.last_played_at}, Published: #{game.publish_date}"
+  end
 end
 
 def create_game
