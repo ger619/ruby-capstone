@@ -1,3 +1,4 @@
+require 'date'
 require_relative './item'
 
 class Author < Item
@@ -14,9 +15,7 @@ class Author < Item
   end
 
   def add_item(item)
-    item.is_a?(Item) && !@items.include?(item) && (
-    @items << item
+    (item.is_a?(Item) && @items.include?(item)) || (@items << item)
     item.add_author(self)
-  )
   end
 end

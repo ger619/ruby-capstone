@@ -35,7 +35,7 @@ def read_music(file)
     music_on_spotify = el['value']['on_spotify']
     music_publish_date = el['value']['publish_date']
     puts "ID: #{music_id} On Spotify: #{music_on_spotify} Publish Date: #{music_publish_date}"
-    add_music(music_on_spotify, music_publish_date)
+    add_music(music_on_spotify)
   end
 end
 
