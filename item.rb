@@ -9,7 +9,7 @@ class Item
     @genre = nil
     @author = nil
     @label = nil
-    @publish_date = Date.new
+    @publish_date = Date.today
     @archived = false
   end
 
