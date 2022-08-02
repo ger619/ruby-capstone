@@ -1,5 +1,6 @@
 require_relative './book_methods'
 require_relative './music_methods'
+require_relative './game_methods'
 require_relative './file_helper'
 require 'json'
 
@@ -31,6 +32,14 @@ class App
 
   def display_music
     list_music
+  end
+
+  def games_display
+    list_games
+  end
+
+  def add_game
+    create_game
   end
 
   def save_files

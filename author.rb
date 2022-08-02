@@ -8,4 +8,9 @@ class Author
     @id = id
     @items = []
   end
+
+  def add_item(item)
+    @items << item
+    item.author = self
+  end
 end
