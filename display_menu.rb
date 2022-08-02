@@ -19,7 +19,7 @@ def display_menu(app)
   when '2'
     display_music_albums(app)
   when '3'
-    display_games
+    display_games(app)
   when '4'
     exit_app(app)
   end
@@ -65,23 +65,26 @@ def display_music_albums(app)
   end
 end
 
-def display_games
+def display_games(app) # rubocop:disable Metrics/MethodLength
   puts 'Enter selected tasks:'
   options = [
     '1 - List all games',
     '2 - Add a game',
-    '3 - Back to menu'
+    '3 - List authors',
+    '4 - Back to menu'
   ]
   puts options
   choice = gets.chomp
   case choice
   when '1'
-    list_games
+    app.games_display
   when '2'
-    add_game
+    app.add_game
   when '3'
-    display_menu(app)
+    app.author_display
   when '4'
+    display_menu(app)
+  when '5'
     exit_app(app)
   else
     puts 'Invalid option'

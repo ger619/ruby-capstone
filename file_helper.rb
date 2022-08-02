@@ -1,4 +1,18 @@
+require_relative './game_methods'
 require_relative './book_methods'
+
+def read_game(file)
+  puts ''
+  puts '**********************GAMES************************'
+  puts ''
+  file.each do |el|
+    game_mode = el['value']['multiplayer']
+    game_last_played_at = el['value']['last_played_at']
+    game_publish_date = el['value']['publish_date']
+    puts "Game Mode: #{game_mode} When Last Played: #{game_last_played_at} When Made: #{game_publish_date}"
+    add_game(multiplayer, last_played_at, publish_date)
+  end
+end
 
 def read_book(file)
   puts ''
