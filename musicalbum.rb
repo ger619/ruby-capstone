@@ -5,7 +5,8 @@ require 'date'
 class MusicAlbum < Item
   attr_accessor :on_spotify, :archived
 
-  def initialize(on_spotify, publish_date)
+  def initialize(on_spotify, _publish_date)
+    super(Date.today, false)
     @on_spotify = true if on_spotify == 'y'
     @publish_date = Date.today
     @archived = false

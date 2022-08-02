@@ -3,6 +3,7 @@ require_relative './app'
 
 class Genre < Item
   def initialize(id, name)
+    super(Date.today, false)
     @id = id
     @name = name
     @items = []
