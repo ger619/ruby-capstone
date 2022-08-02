@@ -14,3 +14,8 @@ def create_book
   new_book = Book.new(publisher, cover_state)
   @book_list.push(new_book)
 end
+
+def add_book(book_publisher, book_cover_state)
+  new_book = Book.new(book_publisher, book_cover_state)
+  @book_list << new_book
+end

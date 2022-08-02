@@ -1,4 +1,5 @@
 require_relative './book_methods'
+require_relative './file_helper'
 require 'json'
 
 class App
@@ -14,7 +15,7 @@ class App
     list_books
   end
 
-  def add_book
+  def create_book
     create_book
   end
 

@@ -34,7 +34,7 @@ def display_books(app)
   when '2'
     list_labels
   when '3'
-    app.add_book
+    app.create_book
   when '4'
     display_menu
   when '5'
