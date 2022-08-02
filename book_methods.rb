@@ -22,6 +22,6 @@ end
 
 def list_labels
   @label_list.each_with_index do |label, index|
-    puts "(#{index}) Title: \"#{label.title}\", Cover State: #{label.color}"
+    puts "(#{index}) Title: \"#{label.title}\", Color: #{label.color}"
   end
 end
