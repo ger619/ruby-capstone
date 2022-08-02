@@ -1,25 +1,16 @@
 require_relative './book_methods'
 require_relative './music_methods'
-
-class App
-  attr_accessor :book_list, :music_list
-
-  def initialize()
-    @book_list = []
-    @music_list = []
-    
 require_relative './file_helper'
 require 'json'
 
 class App
-  attr_accessor :book_list, :label_list, :music_album_list, :game_list
+  attr_accessor :book_list, :label_list, :music_list, :game_list
 
   def initialize()
     @book_list = []
     @label_list = []
-    @music_album_list = []
+    @music_list = []
     @game_list = []
-    
   end
 
   def book_display
@@ -40,7 +31,8 @@ class App
 
   def display_music
     list_music
-    
+  end
+
   def save_files
     instance_variables.each do |var|
       file_name = var.to_s.chomp('_list').delete('@')
@@ -77,6 +69,5 @@ class App
       hash[var.to_s.delete('@')] = obj.instance_variable_get(var)
     end
     hash
-    
   end
 end
