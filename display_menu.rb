@@ -21,7 +21,7 @@ def display_menu(app)
   when '3'
     display_games
   when '4'
-    exit_app
+    exit_app(app)
   end
 end
 
@@ -31,15 +31,15 @@ def display_books(app)
   choice = gets.chomp
   case choice
   when '1'
-    app.display_books
+    app.book_display
   when '2'
-    list_labels
+    app.label_display
   when '3'
-    app.add_book
+    app.book_create
   when '4'
-    display_menu
+    display_menu(app)
   when '5'
-    exit_app
+    exit_app(app)
   else
     puts 'Invalid option'
   end
@@ -60,7 +60,7 @@ def display_music_albums(app)
   when '2'
     app.add_music
   when '3'
-    display_menu
+    display_menu(app)
   when '4'
     exit_app
   else
@@ -83,9 +83,9 @@ def display_games
   when '2'
     add_game
   when '3'
-    display_menu
+    display_menu(app)
   when '4'
-    exit_app
+    exit_app(app)
   else
     puts 'Invalid option'
   end
