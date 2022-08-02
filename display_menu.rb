@@ -1,5 +1,6 @@
 require_relative './exit_app'
 require_relative './book'
+require_relative './music'
 
 def display_menu(app)
   puts "\nWelcome to our Catalog!"
@@ -16,7 +17,7 @@ def display_menu(app)
   when '1'
     display_books(app)
   when '2'
-    display_music_albums
+    display_music_albums(app)
   when '3'
     display_games
   when '4'
@@ -44,7 +45,7 @@ def display_books(app)
   end
 end
 
-def display_music_albums
+def display_music_albums(app)
   puts 'Enter selected tasks:'
   options = [
     '1 - List all music albums',
@@ -55,9 +56,9 @@ def display_music_albums
   choice = gets.chomp
   case choice
   when '1'
-    list_music_albums
+    app.display_music
   when '2'
-    add_music_album
+    app.add_music
   when '3'
     display_menu
   when '4'
