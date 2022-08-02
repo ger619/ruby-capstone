@@ -15,7 +15,7 @@ describe 'Unit Tests for Label Class' do
     end
 
     it 'should be a kind of Item' do
-      expect(@label).not_to be_kind_of Item
+      expect(@label).to be_kind_of Item
     end
   end
 
