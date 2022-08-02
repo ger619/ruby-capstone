@@ -1,14 +1,15 @@
 require_relative './book_methods'
+require_relative './music_methods'
 require_relative './file_helper'
 require 'json'
 
 class App
-  attr_accessor :book_list, :label_list, :music_album_list, :game_list
+  attr_accessor :book_list, :label_list, :music_list, :game_list
 
   def initialize()
     @book_list = []
     @label_list = []
-    @music_album_list = []
+    @music_list = []
     @game_list = []
   end
 
@@ -22,6 +23,14 @@ class App
 
   def book_create
     create_book
+  end
+
+  def add_music
+    create_music
+  end
+
+  def display_music
+    list_music
   end
 
   def save_files

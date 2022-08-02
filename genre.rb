@@ -1,8 +1,9 @@
 require_relative './item'
 require_relative './app'
 
-class Genre
-  def initialize(id, name, _items)
+class Genre < Item
+  def initialize(id, name)
+    super(Date.today, false)
     @id = id
     @name = name
     @items = []
