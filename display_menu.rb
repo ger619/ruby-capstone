@@ -47,21 +47,18 @@ end
 
 def display_music_albums(app)
   puts 'Enter selected tasks:'
-  options = [
-    '1 - List all music albums',
-    '2 - Add a music album',
-    '3 - Back to menu'
-  ]
-  puts options
+  puts " 1 - List all music albums\n 2 - List all Genres\n 3 - Add a music album\n 4 - Back to menu\n 5 - Exit App"
   choice = gets.chomp
   case choice
   when '1'
     app.display_music
   when '2'
-    app.add_music
+    app.display_genre
   when '3'
-    display_menu(app)
+    app.add_music
   when '4'
+    display_menu(app)
+  when '5'
     exit_app
   else
     puts 'Invalid option'
