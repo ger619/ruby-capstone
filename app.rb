@@ -16,6 +16,10 @@ class App
     list_books
   end
 
+  def label_display
+    list_labels
+  end
+
   def book_create
     create_book
   end

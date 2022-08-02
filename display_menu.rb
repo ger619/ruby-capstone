@@ -32,11 +32,11 @@ def display_books(app)
   when '1'
     app.book_display
   when '2'
-    list_labels
+    app.label_display
   when '3'
     app.book_create
   when '4'
-    display_menu
+    display_menu(app)
   when '5'
     exit_app(app)
   else
@@ -59,7 +59,7 @@ def display_music_albums
   when '2'
     add_music_album
   when '3'
-    display_menu
+    display_menu(app)
   when '4'
     exit_app
   else
@@ -82,9 +82,9 @@ def display_games
   when '2'
     add_game
   when '3'
-    display_menu
+    display_menu(app)
   when '4'
-    exit_app
+    exit_app(app)
   else
     puts 'Invalid option'
   end
