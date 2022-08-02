@@ -20,6 +20,13 @@ class Item
     )
   end
 
+  def add_genre(genre)
+    genre.is_a?(Genre) && @genre.nil? && (
+      @genre = genre
+      genre.add_item(self)
+    )
+  end
+
   def move_to_archive
     @archived = true if can_be_archived?
   end
