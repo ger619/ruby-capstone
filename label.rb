@@ -1,10 +1,12 @@
 require_relative './item'
 
-class Label
+class Label < Item
   attr_reader :id, :title, :color, :items
 
   def initialize(title, color)
-    @id = Random.rand(1..1000)
+    super(id = Random.rand(1..1000), publish_date = Date.today)
+    @id = id
+    @publish_date = publish_date
     @title = title
     @color = color
     @items = []

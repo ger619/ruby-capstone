@@ -11,5 +11,5 @@ def create_files
   FileUtils.touch('./data/music.json')
   FileUtils.touch('./data/label.json')
   FileUtils.touch('./data/game.json')
-  FileUtils.touch('./data/source.json')
+  FileUtils.touch('./data/genre.json')
 end

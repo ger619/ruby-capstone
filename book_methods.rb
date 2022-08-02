@@ -3,7 +3,7 @@ require_relative './book'
 
 def list_books
   @book_list.each_with_index do |book, index|
-    puts "(#{index}) Publisher: \"#{book.publisher}\", Cover State: #{book.cover_state}"
+    puts "(#{index}) ID: #{book.id} Publish Date: #{book.publish_date} Publisher: \"#{book.publisher}\", Cover State: #{book.cover_state}" # rubocop:disable Layout/LineLength
   end
 end
 

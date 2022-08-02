@@ -52,18 +52,6 @@ class App
     create_game
   end
 
-  def games_display
-    list_games
-  end
-
-  def add_game
-    create_game
-  end
-
-  def author_display
-    list_author
-  end
-
   def save_files
     instance_variables.each do |var|
       file_name = var.to_s.chomp('_list').delete('@')

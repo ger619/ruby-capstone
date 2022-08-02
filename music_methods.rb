@@ -3,7 +3,7 @@ require_relative './musicalbum'
 
 def list_music
   @music_list.each_with_index do |music, index|
-    puts "(#{index}) On Spotify: \"#{music.on_spotify}\", Publish Date: #{music.publish_date}"
+    puts "(#{index}) ID: #{music.id} On Spotify: \"#{music.on_spotify}\", Publish Date: #{music.publish_date}"
   end
 end
 

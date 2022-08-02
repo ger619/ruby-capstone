@@ -5,7 +5,9 @@ class Book < Item
   attr_accessor :publisher, :cover_state
 
   def initialize(publisher, cover_state)
-    super(Date.today, false)
+    super(id = Random.rand(1..1000), publish_date = Date.today)
+    @id = id
+    @publish_date = publish_date
     @publisher = publisher
     @cover_state = cover_state
   end
