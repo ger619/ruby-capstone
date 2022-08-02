@@ -31,9 +31,9 @@ describe 'Unit Tests for Game Class' do
     end
 
     context 'when was game published' do
-        it 'should be "2005"' do
-          expect(@game.publish_year).to eql '2005'
-        end
+      it 'should be "2005"' do
+        expect(@game.publish_year).to eql '2005'
+      end
     end
   end
 end
