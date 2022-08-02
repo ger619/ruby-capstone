@@ -20,7 +20,7 @@ describe 'Unit Tests for Book Class' do
   end
 
   context 'book publisher' do
-    it 'should be "Universal"' do
+    it 'should be "MyPublisher"' do
       expect(@book.publisher).to eql 'MyPublisher'
     end
   end
