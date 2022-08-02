@@ -1,15 +1,15 @@
 require_relative './app'
-require_relative './music'
+require_relative './MusicAlbum'
 
 def list_music
   p @music_list
 end
 
 def create_music
-  puts 'Please enter name of artist'
+  puts 'Is it on spotify?'
   artist = gets.chomp
-  puts 'Please enter name of album'
+  puts 'Can be archived?'
   album = gets.chomp
-  new_music = Music.new(artist, album)
+  new_music = MusicAlbum.new(artist, album)
   @music_list.push(new_music)
 end

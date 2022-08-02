@@ -1,6 +1,6 @@
 require_relative './exit_app'
 require_relative './book'
-require_relative './music'
+require_relative './MusicAlbum'
 
 def display_menu(app)
   puts "\nWelcome to our Catalog!"
