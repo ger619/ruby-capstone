@@ -20,7 +20,7 @@ def display_menu(app)
   when '3'
     display_games
   when '4'
-    exit_app
+    exit_app(app)
   end
 end
 
@@ -38,7 +38,7 @@ def display_books(app)
   when '4'
     display_menu
   when '5'
-    exit_app
+    exit_app(app)
   else
     puts 'Invalid option'
   end
