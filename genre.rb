@@ -16,3 +16,8 @@ class Genre < Item
     item.add_genre(self)
   end
 end
+
+def list_genre
+  puts "Genre: #{@name}"
+  p @genre_list
+end

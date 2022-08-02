@@ -1,15 +1,17 @@
 require_relative './book_methods'
 require_relative './music_methods'
+require_relative './genre'
 require_relative './file_helper'
 require 'json'
 
 class App
-  attr_accessor :book_list, :label_list, :music_list, :game_list
+  attr_accessor :book_list, :label_list, :music_list, :genre_list, :game_list
 
-  def initialize()
+  def initialize
     @book_list = []
     @label_list = []
     @music_list = []
+    @genre_list = []
     @game_list = []
   end
 
@@ -25,12 +27,16 @@ class App
     create_book
   end
 
-  def add_music
+  def music_create
     create_music
   end
 
   def display_music
     list_music
+  end
+
+  def display_genre
+    list_genre
   end
 
   def save_files
@@ -54,6 +60,8 @@ class App
         case file_name
         when 'book'
           read_book(ary)
+        when 'music'
+          read_music(ary)
         end
       else
         File.write("./data/#{file_name}.json", '[]')

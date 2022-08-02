@@ -13,3 +13,8 @@ def create_music
   new_music = MusicAlbum.new(artist, album)
   @music_list.push(new_music)
 end
+
+def add_music(on_spotify, publish_date)
+  new_music = MusicAlbum.new(on_spotify, publish_date)
+  @music_list.push(new_music)
+end

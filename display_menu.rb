@@ -1,6 +1,7 @@
 require_relative './exit_app'
 require_relative './book'
 require_relative './MusicAlbum'
+require_relative './Genre'
 
 def display_menu(app)
   puts "\nWelcome to our Catalog!"
@@ -55,7 +56,7 @@ def display_music_albums(app)
   when '2'
     app.display_genre
   when '3'
-    app.add_music
+    app.music_create
   when '4'
     display_menu(app)
   when '5'
