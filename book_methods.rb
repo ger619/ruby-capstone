@@ -1,7 +1,9 @@
 require_relative './app'
 
 def list_books
-  p @book_list
+  @book_list.each_with_index do |book, index|
+    puts "(#{index}) Publisher: \"#{book.publisher}\", Cover State: #{book.cover_state}"
+  end
 end
 
 def create_book

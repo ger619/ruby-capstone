@@ -5,6 +5,8 @@ class App
 
   def initialize()
     @book_list = []
+    @music_album = []
+    @game = []
   end
 
   def display_books
