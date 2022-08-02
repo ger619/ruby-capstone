@@ -8,6 +8,4 @@ class Music
     @on_spotify = on_spotify
     @can_be_archived = can_be_archived
   end
-
 end
-

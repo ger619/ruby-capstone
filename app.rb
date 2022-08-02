@@ -24,5 +24,4 @@ class App
   def display_music
     list_music
   end
-
 end
