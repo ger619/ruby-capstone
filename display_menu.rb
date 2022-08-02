@@ -66,7 +66,7 @@ end
 def for_adding(app)
   puts "\nWelcome to our Catalog!"
   puts "\nPlease select a number for adding items"
-  puts " 1 - Add a book\n 2 - Add a music album\n 3 - Add a genre\n 4 - Back to previous menu\n 5 - Exit App"
+  puts " 1 - Add a book\n 2 - Add a music album\n 3 - Add a game\n 4 - Back to previous menu\n 5 - Exit App"
   choice = gets.chomp
   case choice
   when '1'
@@ -74,7 +74,7 @@ def for_adding(app)
   when '2'
     app.music_create
   when '3'
-    app.genre_create
+    app.game_create
   when '4'
     display_menu(app)
   when '5'
