@@ -70,7 +70,7 @@ def display_games(app)
   options = [
     '1 - List all games',
     '2 - Add a game',
-    '3 - List all authors'
+    '3 - List all authors',
     '4 - Back to menu'
   ]
   puts options
