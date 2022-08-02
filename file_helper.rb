@@ -11,3 +11,14 @@ def read_book(file)
     add_book(book_publisher, book_cover_state)
   end
 end
+
+def read_label(file)
+  puts ''
+  puts '**********************LABEL************************'
+  puts ''
+  file.each do |el|
+    label_title = el['value']['title']
+    label_color = el['value']['color']
+    puts "Label Title: #{label_title} Label Color: #{label_color}"
+  end
+end
