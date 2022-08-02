@@ -68,6 +68,8 @@ class App
         case file_name
         when 'book'
           read_book(ary)
+        when 'label'
+          read_label(ary)
         end
       else
         File.write("./data/#{file_name}.json", '[]')
