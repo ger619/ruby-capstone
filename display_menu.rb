@@ -65,12 +65,12 @@ def display_music_albums(app)
   end
 end
 
-def display_games(app)
+def display_games(app) # rubocop:disable Metrics/MethodLength
   puts 'Enter selected tasks:'
   options = [
     '1 - List all games',
     '2 - Add a game',
-    '3 - List all authors',
+    '3 - List authors',
     '4 - Back to menu'
   ]
   puts options

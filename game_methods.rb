@@ -3,7 +3,7 @@ require_relative './game'
 
 def list_games
   @game_list.each_with_index do |game, index|
-    puts "(#{index}) Multiplayer: \"#{game.multiplayer}\", Last Played: #{game.last_played_at}, Published: #{game.publish_date}"
+    puts "(#{index}) Multiplayer: \"#{game.multiplayer}\", Last Played: #{game.last_played_at}, Published: #{game.publish_date}" # rubocop:disable Layout/LineLength
   end
 end
 
