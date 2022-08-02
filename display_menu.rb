@@ -44,7 +44,7 @@ end
 def display_next(app)
   puts "\nWelcome to our Catalog!"
   puts "\nPlease select a number for listing items"
-  puts " 1 - List all authors\n 2 - List all labels\n 3 - List all sources\n"
+  puts " 1 - List all authors\n 2 - List all labels\n 3 - List all genres\n"
   puts " 4 - For previous menu\n 5 - Exit App"
   choice = gets.chomp
   case choice
@@ -53,7 +53,7 @@ def display_next(app)
   when '2'
     app.label_display
   when '3'
-    app.source_display
+    app.genre_display
   when '4'
     for_listing(app)
   when '5'
@@ -66,7 +66,7 @@ end
 def for_adding(app)
   puts "\nWelcome to our Catalog!"
   puts "\nPlease select a number for adding items"
-  puts " 1 - Add a book\n 2 - Add a music album\n 3 - Add a source\n 4 - Back to previous menu\n 5 - Exit App"
+  puts " 1 - Add a book\n 2 - Add a music album\n 3 - Add a genre\n 4 - Back to previous menu\n 5 - Exit App"
   choice = gets.chomp
   case choice
   when '1'
@@ -74,7 +74,7 @@ def for_adding(app)
   when '2'
     app.music_create
   when '3'
-    app.source_create
+    app.genre_create
   when '4'
     display_menu(app)
   when '5'

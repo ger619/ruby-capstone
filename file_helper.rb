@@ -1,4 +1,5 @@
 require_relative './book_methods'
+require_relative './music_methods'
 
 def read_book(file)
   puts ''
@@ -12,13 +13,58 @@ def read_book(file)
   end
 end
 
+def read_author(file)
+  puts ''
+  puts '**********************AUTHORS************************'
+  puts ''
+  file.each do |el|
+    author_first = el['value']['first_name']
+    author_last = el['value']['last_name']
+    puts "Author First Name: #{author_first} Author Last Name: #{author_last}"
+  end
+end
+
+def read_music(file)
+  puts ''
+  puts '**********************MUSIC ALBUMS************************'
+  puts ''
+  file.each do |el|
+    music_on_spotify = el['value']['on_spotify']
+    music_publish_date = el['value']['publish_date']
+    puts "On Spotify: #{music_on_spotify} Publish Date: #{music_publish_date}"
+    add_music(music_on_spotify, music_publish_date)
+  end
+end
+
 def read_label(file)
   puts ''
-  puts '**********************LABEL************************'
+  puts '**********************LABELS************************'
   puts ''
   file.each do |el|
     label_title = el['value']['title']
     label_color = el['value']['color']
     puts "Label Title: #{label_title} Label Color: #{label_color}"
+  end
+end
+
+def read_game(file)
+  puts ''
+  puts '**********************GAMES************************'
+  puts ''
+  file.each do |el|
+    game_multiplayer = el['value']['multiplayer']
+    game_last_played_at = el['value']['last_game_at']
+    puts "Multiplayer: #{game_multiplayer} Last Played At: #{game_last_played_at}"
+    add_game(game_multiplayer, game_last_played_at)
+  end
+end
+
+def read_genre(file)
+  puts ''
+  puts '**********************GENRES************************'
+  puts ''
+  file.each do |el|
+    genre_name = el['value']['name']
+    puts "Genre Name: #{genre_name}"
   end
 end
