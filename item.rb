@@ -1,17 +1,32 @@
-class Item
-  attr_writer :genre, :author, :source, :label
+require 'date'
+require_relative './label'
 
-  def initialize(publish_date, archived)
+class Item
+  attr_reader :archived, :label, :author, :publish_date, :genre
+
+  def initialize(date)
     @id = Random.rand(1..1000)
-    @publish_date = publish_date
-    @archived = archived
+    @genre = nil
+    @author = nil
+    @label = nil
+    @publish_date = date
+    @archived = false
   end
 
-  def can_be_archived?
-    return true if publish_date > 10
+  def add_label(label)
+    label.is_a?(Label) && @label.nil? && (
+      @label = label
+      label.add_item(self)
+    )
   end
 
   def move_to_archive
     @archived = true if can_be_archived?
+  end
+
+  private
+
+  def can_be_archived?
+    (Date.today - Date.parse(@publish_date)).to_i > 365 * 10
   end
 end

@@ -30,11 +30,11 @@ def display_books(app)
   choice = gets.chomp
   case choice
   when '1'
-    app.display_books
+    app.book_display
   when '2'
     list_labels
   when '3'
-    app.create_book
+    app.book_create
   when '4'
     display_menu
   when '5'
