@@ -6,9 +6,8 @@ class Label < Item
   attr_reader :id, :publish_date
 
   def initialize(title, color)
-    super(id = Random.rand(1..1000), publish_date = Date.today)
+    super(id = Random.rand(1..1000))
     @id = id
-    @publish_date = publish_date
     @title = title
     @color = color
     @items = []
