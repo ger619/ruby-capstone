@@ -10,6 +10,8 @@ CREATE TABLE item (
 
 -- Create a book class table
 CREATE TABLE book (
+  id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+  item_id INT FOREIGN KEY REFERENCES item(id),
   publisher TEXT,
   cover_state TEXT,
 );
@@ -17,6 +19,7 @@ CREATE TABLE book (
 -- Create a label class table
 CREATE TABLE label (
 	id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+    item_id INT FOREIGN KEY REFERENCES item(id),
 	title TEXT,
 	color TEXT
 );
@@ -24,6 +27,7 @@ CREATE TABLE label (
 -- Create a game class table
 CREATE TABLE game (
   id SERIAL PRIMARY KEY ,
+  item_id INT FOREIGN KEY REFERENCES item(id),
   multiplayer VARCHAR,
   last_played_at DATE,
   publish_date DATE,
@@ -32,6 +36,24 @@ CREATE TABLE game (
 -- Create a author class table
 CREATE TABLE author (
 	id SERIAL PRIMARY KEY,
+    item_id INT FOREIGN KEY REFERENCES item(id),
 	first_name VARCHAR,
 	last_name VARCHAR
+);
+
+-- Create a Music Album class table
+CREATE TABLE music_album (
+  id SERIAL PRIMARY KEY,
+  item_id INT FOREIGN KEY REFERENCES item(id),
+  on_spotify BOOLEAN,
+  publish_date DATE,
+  archived BOOLEAN,
+);
+
+-- create a genre
+CREATE TABLE genre (
+  id SERIAL PRIMARY KEY,
+  item_id INT FOREIGN KEY REFERENCES item(id),
+  name VARCHAR
+
 );
