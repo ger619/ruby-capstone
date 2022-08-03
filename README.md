@@ -84,6 +84,13 @@ $ bundle install
 
 Kindly modify the files as needed.
 
+Please run this command to start the application.
+```
+$ ruby main.rb
+```
+Also, a folder named `data` will be generated automatically once you exit the app.
+This folder will contain all the json files that are being read and write for data.
+
 ### Run tests
 
 To install rspec, in the terminal kindly run this command
