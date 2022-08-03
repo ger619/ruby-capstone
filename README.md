@@ -2,7 +2,7 @@
 
 # Catalog Of My Things
 
-*Microverse Ruby Group Capstone Project*
+## *Microverse Ruby Group Capstone Project*
 
 > This is an educational project to create a console app that you to keep a record of different types of things you won: books, music albums, movies, and games. Everything will be based on the UML class diagram presented below.
 
