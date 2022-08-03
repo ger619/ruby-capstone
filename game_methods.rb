@@ -23,3 +23,9 @@ def add_game(multiplayer, last_played_at, publish_year)
   new_game = Game.new(multiplayer, last_played_at, publish_year)
   @game_list << new_game
 end
+
+def list_genres
+  @genre_list.each_with_index do |genre, index|
+    puts "(#{index}) Genre Name: \"#{genre.name}\""
+  end
+end
