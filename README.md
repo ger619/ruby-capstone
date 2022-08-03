@@ -2,13 +2,14 @@
 
 # Catalog Of My Things
 
-## *Microverse Ruby Group Capstone Project*
+## _Microverse Ruby Group Capstone Project_
 
 > This is an educational project to create a console app that you to keep a record of different types of things you won: books, music albums, movies, and games. Everything will be based on the UML class diagram presented below.
 
 ![catalog_of_my_things](https://user-images.githubusercontent.com/98527559/182126086-fc6a58be-ce66-43cc-9a67-42ddf9633100.png)
 
 ## Learning Objectives 🔖
+
 - [x] Insert and query data in SQL.
 - [x] Use primary key & foreign key mechanisms for joining tables.
 - [x] Understand the different types of relationships between tables.
@@ -29,7 +30,8 @@
 - [x] Recognize the value of making equal contributions to group projects to produce the best outcome.
 
 ## Project Documentation 📄
-- [x] Here is the presentation video [link](https://drive.google.com/file/d/)👈
+
+- [x] Here is the presentation video [link](https://drive.google.com/file/d/1Fi1Og-ZkgPK-UnpXF65DkXFkomawnbAF/view?usp=sharing)👈
 
 ## Built With 🛠️
 
@@ -104,7 +106,7 @@ $ rspec ./spec/#{filename}_spec.rb
 
 - GitHub: [![GitHub Badge](https://img.shields.io/badge/-ramrod433-white?logo=GitHub&logoColor=181717&style=plastic)](https://github.com/ramrod433)
 
-- Twitter: [![Twitter Badge](https://img.shields.io/badge/-\\__Djoleto-white?logo=Twitter&logoColor=1DA1F2&style=plastic)](https://twitter.com/_djoleto_)
+- Twitter: [![Twitter Badge](https://img.shields.io/badge/-\__Djoleto-white?logo=Twitter&logoColor=1DA1F2&style=plastic)](https://twitter.com/_djoleto_)
 
 👤 **Abol Ger** <img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="20"/>
 
