@@ -5,86 +5,80 @@ require_relative './Genre'
 
 def display_menu(app)
   puts "\nWelcome to our Catalog!"
-  puts "\nPlease choose an option by entering a number:"
-  options = [
-    '1 - For Books',
-    '2 - For Music Albums',
-    '3 - For Games',
-    '4 - Exit'
-  ]
-  puts options
+  puts "\nPlease choose a task by entering a number:"
+  puts " 1 - For listing items\n 2 - For adding items\n 3 - Exit App"
   choice = gets.chomp
   case choice
   when '1'
-    display_books(app)
+    for_listing(app)
   when '2'
-    display_music_albums(app)
+    for_adding(app)
   when '3'
-    display_games
-  when '4'
     exit_app(app)
+  else
+    puts 'Invalid selection'
   end
 end
 
-def display_books(app)
-  puts 'Enter selected tasks:'
-  puts " 1 - List all books\n 2 - List all labels\n 3 - Add a book\n 4 - Back to menu\n 5 - Exit App"
+def for_listing(app)
+  puts "\nWelcome to our Catalog!"
+  puts "\nPlease select a number for listing items"
+  puts " 1 - List all books\n 2 - List all music albums\n 3 - List all games\n"
+  puts " 4 - For next menu\n 5 - Exit App"
   choice = gets.chomp
   case choice
   when '1'
     app.book_display
   when '2'
+    app.music_display
+  when '3'
+    app.game_display
+  when '4'
+    display_next(app)
+  when '5'
+    exit_app(app)
+  else
+    puts 'Invalid selection'
+  end
+end
+
+def display_next(app)
+  puts "\nWelcome to our Catalog!"
+  puts "\nPlease select a number for listing items"
+  puts " 1 - List all authors\n 2 - List all labels\n 3 - List all genres\n"
+  puts " 4 - For previous menu\n 5 - Exit App"
+  choice = gets.chomp
+  case choice
+  when '1'
+    app.author_display
+  when '2'
     app.label_display
   when '3'
+    app.genre_display
+  when '4'
+    for_listing(app)
+  when '5'
+    exit_app(app)
+  else
+    puts 'Invalid selection'
+  end
+end
+
+def for_adding(app)
+  puts "\nWelcome to our Catalog!"
+  puts "\nPlease select a number for adding items"
+  puts " 1 - Add a book\n 2 - Add a music album\n 3 - Add a game\n 4 - Back to previous menu\n 5 - Exit App"
+  choice = gets.chomp
+  case choice
+  when '1'
     app.book_create
-  when '4'
-    display_menu(app)
-  when '5'
-    exit_app(app)
-  else
-    puts 'Invalid option'
-  end
-end
-
-def display_music_albums(app)
-  puts 'Enter selected tasks:'
-  puts " 1 - List all music albums\n 2 - List all Genres\n 3 - Add a music album\n 4 - Back to menu\n 5 - Exit App"
-  choice = gets.chomp
-  case choice
-  when '1'
-    app.display_music
   when '2'
-    app.display_genre
-  when '3'
     app.music_create
+  when '3'
+    app.game_create
   when '4'
     display_menu(app)
   when '5'
-    exit_app
-  else
-    puts 'Invalid option'
-  end
-end
-
-def display_games
-  puts 'Enter selected tasks:'
-  options = [
-    '1 - List all games',
-    '2 - Add a game',
-    '3 - Back to menu'
-  ]
-  puts options
-  choice = gets.chomp
-  case choice
-  when '1'
-    list_games
-  when '2'
-    add_game
-  when '3'
-    display_menu(app)
-  when '4'
     exit_app(app)
-  else
-    puts 'Invalid option'
   end
 end

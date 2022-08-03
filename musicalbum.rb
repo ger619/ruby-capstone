@@ -1,14 +1,16 @@
 require_relative './item'
-require_relative './app'
 require 'date'
+require_relative './app'
 
 class MusicAlbum < Item
   attr_accessor :on_spotify, :archived
+  attr_reader :id, :publish_date
 
-  def initialize(on_spotify, _publish_date)
-    super(Date.today, false)
+  def initialize(on_spotify)
+    super(id = Random.rand(1..1000), publish_date = Date.today)
+    @id = id
+    @publish_date = publish_date
     @on_spotify = true if on_spotify == 'y'
-    @publish_date = Date.today
     @archived = false
   end
 

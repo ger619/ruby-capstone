@@ -1,26 +1,44 @@
 require_relative './book_methods'
 require_relative './music_methods'
-require_relative './genre'
 require_relative './file_helper'
+require_relative './genre'
+require_relative './game_methods'
 require 'json'
 
 class App
-  attr_accessor :book_list, :label_list, :music_list, :genre_list, :game_list
+  attr_accessor :book_list, :author_list, :music_list, :label_list, :game_list, :genre_list
 
   def initialize
     @book_list = []
-    @label_list = []
+    @author_list = []
     @music_list = []
-    @genre_list = []
+    @label_list = []
     @game_list = []
+    @genre_list = []
   end
 
   def book_display
     list_books
   end
 
+  def author_display
+    list_authors
+  end
+
+  def music_display
+    list_music
+  end
+
   def label_display
     list_labels
+  end
+
+  def game_display
+    list_games
+  end
+
+  def genre_display
+    list_genres
   end
 
   def book_create
@@ -31,8 +49,8 @@ class App
     create_music
   end
 
-  def display_music
-    list_music
+  def game_create
+    create_game
   end
 
   def display_genre
@@ -54,14 +72,16 @@ class App
   def read_files
     instance_variables.each do |var|
       file_name = var.to_s.chomp('_list').delete('@')
-
       if File.exist?("./data/#{file_name}.json") && File.read("./data/#{file_name}.json") != ''
         ary = JSON.parse(File.read("./data/#{file_name}.json"))
         case file_name
-        when 'book'
-          read_book(ary)
-        when 'music'
-          read_music(ary)
+        when 'author'
+          read_author(ary)
+        when 'label'
+          read_label(ary)
+        when 'genre'
+          read_genre(ary)
+
         end
       else
         File.write("./data/#{file_name}.json", '[]')
