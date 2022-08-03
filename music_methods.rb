@@ -22,6 +22,9 @@ def add_music(on_spotify, publish_date)
 end
 
 def list_labels
+  if @label_list.empty?
+    puts 'Label list is empty'
+  else
   @label_list.each_with_index do |label, index|
     puts "(#{index}) Title: \"#{label.title}\", Color: #{label.color}"
   end

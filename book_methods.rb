@@ -24,6 +24,10 @@ def add_book(book_publisher, book_cover_state, book_publish_date)
 end
 
 def list_authors
+  if @author_list.empty?
+    puts 'Author list is empty'
+  else
+
   @author_list.each_with_index do |author, index|
     puts "(#{index}) ID: #{author.id} Author First Name: \"#{author.first_name}\", Author Last Name: \"#{author.last_name}\"" # rubocop:disable Layout/LineLength
   end
