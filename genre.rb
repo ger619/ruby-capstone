@@ -5,11 +5,11 @@ class Genre < Item
   attr_accessor :name, :items
   attr_reader :id, :publish_date
 
-  def initialize(name)
-    super(id = Random.rand(1..1000), publish_date = Date.today)
+  def initialize(name, publish_date)
+    super(id = Random.rand(1..1000))
     @id = id
-    @publish_date = publish_date
     @name = name
+    @publish_date = publish_date
     @items = []
   end
 
