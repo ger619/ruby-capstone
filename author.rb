@@ -6,9 +6,8 @@ class Author < Item
   attr_reader :id, :items
 
   def initialize(first_name, last_name)
-    super(id = Random.rand(1..1000), publish_date = Date.today)
+    super(id = Random.rand(1..1000))
     @id = id
-    @publish_date = publish_date
     @first_name = first_name
     @last_name = last_name
     @items = []
