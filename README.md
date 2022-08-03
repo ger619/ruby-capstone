@@ -70,6 +70,14 @@ In the terminal, go to your file directory and run this command.
 
 ```
 $ git clone git@github.com:ger619/ruby-capstone.git
+
+```
+
+$ gem install bundler
+
+```
+$ bundle install
+
 ```
 
 ### Usage
@@ -106,7 +114,7 @@ $ rspec ./spec/#{filename}_spec.rb
 
 - GitHub: [![GitHub Badge](https://img.shields.io/badge/-ramrod433-white?logo=GitHub&logoColor=181717&style=plastic)](https://github.com/ramrod433)
 
-- Twitter: [![Twitter Badge](https://img.shields.io/badge/-\__Djoleto-white?logo=Twitter&logoColor=1DA1F2&style=plastic)](https://twitter.com/_djoleto_)
+- Twitter: [![Twitter Badge](https://img.shields.io/badge/-__Djoleto-white?logo=Twitter&logoColor=1DA1F2&style=plastic)](https://twitter.com/_djoleto_)
 
 👤 **Abol Ger** <img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="20"/>
 
