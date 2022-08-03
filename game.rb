@@ -2,13 +2,8 @@ require 'date'
 require_relative './item'
 
 class Game < Item
-<<<<<<< HEAD
-  attr_accessor :multiplayer, :last_played_at, :publish_year
-  attr_reader :id, :publish_date
-=======
   attr_accessor :multiplayer, :last_played_at, :publish_date
   attr_reader :id
->>>>>>> 64e17a0ce757e7f2d79a6d94b8bcf077a641cbd1
 
   def initialize(multiplayer, last_played_at, publish_date)
     super(id = Random.rand(1..1000))
