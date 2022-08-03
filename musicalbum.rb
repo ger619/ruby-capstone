@@ -3,18 +3,20 @@ require 'date'
 require_relative './app'
 
 class MusicAlbum < Item
-  attr_accessor :on_spotify, :archived
-  attr_reader :id, :publish_date
+  attr_accessor :on_spotify, :archived, :publish_date
+  attr_reader :id
 
-  def initialize(on_spotify)
-    super(id = Random.rand(1..1000), publish_date = Date.today)
+  def initialize(on_spotify, publish_date)
+    super(id = Random.rand(1..1000))
     @id = id
-    @publish_date = publish_date
     @on_spotify = true if on_spotify == 'y'
-    @archived = false
+    @publish_date = publish_date
+    @archived = can_be_archived?
   end
 
+  private
+
   def can_be_archived?
-    @on_spotify && (Date.today - Date.parse(@publish_date)).to_i > 365 * 10
+    super || @on_spotify ? true : false
   end
 end

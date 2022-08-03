@@ -8,19 +8,19 @@ def list_games
 end
 
 def create_game
-  print 'Multiplayer: Yes or No '
+  print 'Multiplayer [y/n]: '
   multiplayer = gets.chomp
-  print 'Last played at (year): '
+  print 'Last played at [yyyy/mm/dd]: '
   last_played_at = gets.chomp
-  print 'Publish Year: '
-  publish_year = gets.chomp
+  puts 'Please state when was the game published [yyyy/mm/dd]:'
+  publish_date = gets.chomp
   print 'Game Added Succesfully'
-  new_game = Game.new(multiplayer, last_played_at, publish_year)
+  new_game = Game.new(multiplayer, last_played_at, publish_date)
   @game_list << new_game
 end
 
-def add_game(multiplayer, last_played_at, publish_year)
-  new_game = Game.new(multiplayer, last_played_at, publish_year)
+def add_game(multiplayer, last_played_at, publish_date)
+  new_game = Game.new(multiplayer, last_played_at, publish_date)
   @game_list << new_game
 end
 

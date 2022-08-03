@@ -8,14 +8,16 @@ def list_music
 end
 
 def create_music
-  puts 'Is it on spotify?'
+  puts 'Is it on spotify? [y/n]: '
   on_spotify = gets.chomp
-  new_music = MusicAlbum.new(on_spotify)
+  puts 'Please state when was the music published [yyyy/mm/dd]:'
+  publish_date = gets.chomp
+  new_music = MusicAlbum.new(on_spotify, publish_date)
   @music_list.push(new_music)
 end
 
-def add_music(on_spotify)
-  new_music = MusicAlbum.new(on_spotify)
+def add_music(on_spotify, publish_date)
+  new_music = MusicAlbum.new(on_spotify, publish_date)
   @music_list << new_music
 end
 
